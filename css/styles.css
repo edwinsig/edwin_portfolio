@@ -78,6 +78,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
 .project_title {
@@ -101,12 +102,16 @@ h2 {
 }
 
 .project_details{
-    width: 500px;
+    width: 50%;
     
 }
 
 .project_imageContainer {
-    width: 500px;
+    width: 50%;
+}
+
+.project_imageContainer img {
+  max-width: 100%;
 }
 
 .hero {
@@ -119,6 +124,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header2 {
@@ -128,6 +134,7 @@ h2 {
     justify-content: space-between;
     height: 90px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .menu {
@@ -172,6 +179,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     }
 
     .event_list {
@@ -183,8 +191,8 @@ figure {
         margin-left: 20px;
       }
       .event { 
-        margin: 10px;
-        width: 480px;
+        margin: 1%;
+        width: 48%;
         flex-shrink: 0;
         border-radius: 10px;
         overflow: hidden;
@@ -221,6 +229,7 @@ figure {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
       }
 
     .social {
@@ -271,11 +280,137 @@ figure {
 
     .container {
         /* border: 1px solid red; */
-        width: 1000px;
+        max-width: 1000px;
+        flex: 1;
         margin: 0 auto;
         display: inherit;
         justify-content: inherit;
         align-items: inherit;
         height: inherit;
         flex-wrap: inherit;
+      }
+
+      @media screen and (max-width: 1024px){
+        body {
+          border: 10px solid red;
+        }
+      }
+      @media screen and (max-width: 767px){
+        .header2 {
+          display: block;
+          height: auto;
+        }
+
+        .header2 ol{
+          display: block;
+        }
+
+        .header2 ol li{
+          height: 50px;
+         
+        }
+
+        .header2 a{
+          justify-content: center;
+        }
+
+        .header2 .logo{
+          text-align: center;
+        }
+
+        .project {
+          display: block;
+        }
+
+        .project_imageContainer {
+          width: auto;
+          text-align: center;
+          
+        }
+
+        .project_details {
+          width: auto;
+          font-size: 16px;
+
+        }
+
+        .project_title {
+
+          font-size: 1.5em;
+          margin-bottom: .3em;
+
+        }
+
+        .project_url, .project_course, .project_date {
+          font-size: 1em;
+          margin: .3em 0;
+
+        }
+
+         .project_description {
+          font-size: 0.8em;
+
+        }
+
+        .event {
+          width: auto;
+          flex-shrink: initial;
+        }
+
+        .event img {
+          width: 100%;
+        }
+
+        .event_detail {
+          margin: -2em .5em .5em;
+          padding: 1em;
+        }
+
+        .contact{
+          height: auto;
+          padding: 1em 0;
+          text-align: center;
+          display: block;
+        }
+
+        .form-email button {
+          margin: 1em auto;
+        }
+        
+        .form-email h3 {
+          margin-top: 0;
+        }
+
+        .footer2 {
+          display: block;
+          text-align: center;
+          border: 1px solid transparent;
+        }
+      }
+
+
+
+      @media screen and (max-width: 480px){
+        
+        .project_details {
+          width: auto;
+          font-size: 12px;
+
+        }
+
+        .contact{
+          height: auto;
+          padding: 1em 0;
+          text-align: center;
+          display: block;
+        }
+
+
+      }
+
+
+      @media screen and (max-width: 320px){
+        body {
+          border: 10px solid yellow;
+        }
       }
